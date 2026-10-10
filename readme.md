@@ -1,4 +1,4 @@
-# patchright-enhanced 
+# patchright-enhanced
 
 <a href="https://trendshift.io/repositories/242710?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-242710" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/242710/daily?language=TypeScript" alt="whaleyxbt%2Fpatchright-enhanced | Trendshift" width="250" height="55"/></a>
 
@@ -10,12 +10,14 @@ that's basically just a wrapper around OG patchright, so it's easier to get star
 
 ## Setup for Linux
 
+Use Node.js 20 or newer and pnpm.
+
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Install Chrome for Patchright
-npx patchright install chrome
+pnpm exec patchright install chrome
 
 # Copy env template and configure
 cp .env.example .env
@@ -39,8 +41,8 @@ All settings are in `.env`:
 ## Usage
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 it opens a chrome session with the configured proxy and navigates to `START_PAGE_URL`. the session stays open until you close the browser window manually.
@@ -54,3 +56,16 @@ my small framework relies entirely on patchright's built-in stealth patches:
 - `--enable-automation` flag removed
 - `navigator.webdriver` returns `false` natively
 - No fingerprint injection, no `addInitScript`, no `Object.defineProperty` overrides
+
+## Contributing and community
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, checks, and the pull request workflow.
+Please follow the [code of conduct](CODE_OF_CONDUCT.md) and report vulnerabilities
+using the [security policy](SECURITY.md). Issue and PR templates are included on GitHub.
+
+## Roadmap
+
+The next steps are to strengthen the existing core, add a UI/UX for profiles,
+proxies, and sessions, and evolve this setup into an automatable anti-detect
+browser with a local API and CLI. These capabilities are planned, not implemented.
+See the [mini roadmap](ROADMAP.md) for the checklist.

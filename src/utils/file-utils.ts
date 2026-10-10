@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as os from 'os';
 
 export function generateTempUserDataDir(): string {
-  return fs.mkdtempSync(path.join(os.tmpdir(), 'ghostprobe_'));
+  return fs.mkdtempSync(path.join(os.tmpdir(), 'patchright-enhanced_'));
 }
 
 // Must be called after context.close()
