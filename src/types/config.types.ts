@@ -1,7 +1,6 @@
 export interface BrowserConfig {
   headless: boolean;
   executablePath: string;
-  locale: string;
   timezoneId: string;
 }
 
